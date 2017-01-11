@@ -1,0 +1,14 @@
+.*{margin:0; padding:0;}
+.calculator-wrap {width:252px;height:auto;overflow:hidden; border:#fff 1px solid; margin:20px auto;}
+.calculator-wrap div {clear:both;}
+.calcu-screen{background:#F8F8F8; border:1px solid #eee;}
+.calcu-btn {padding:0; height:auto;overflow:hidden; background:#364254; color:#fff;}
+.calcu-btn input {width:50px;height:64px; outline:none; display:inline-block;line-height:64px;font-size:16px;background:#eaeaea; border:none; border-right:1px solid #48586f; border-bottom:1px solid #48586f; background:#364254; color:#fff; box-sizing:border-box; text-shadow:1px 1px 5px #000;}
+.calcu-btn input.tool {background-color:#414e63;}
+.calcu-btn input:hover {background-color:#2DC3E8;cursor:pointer;}
+.calcu-btn input:active {background-color:#2CB4D9;cursor:pointer; color:#fff;}
+.calcu-btn input.tool:active {background-color:#2CB4D9;cursor:pointer;}
+.calcu-screen{padding:0 0 12px 0;}
+.screen {width:235px;height:32px;line-height:32px;padding:5px 0; margin:0 auto;direction:ltr;text-align:right;font-size:24px;color:#000; text-shadow:1px 1px 3px #aaa;}
+.calcu-screen .numScreenSave{font-size:18px; white-space:nowrap; font-family:"Microsoft Yahei";}
+.calcu-screen .numScreen{ border:none; background:none; font-family:"Microsoft Yahei";}

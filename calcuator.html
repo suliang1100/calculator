@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang='zh-cn'>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name="renderer" content="webkit">
+<link rel="stylesheet" type="text/css" href="calculator.css">
+<title>计算器</title>
+</head>
+<body>
+<div class="modal-body" id="useCalculatorBody">
+	<div id="calculator" class="calculator-wrap">
+		<div id="calcu-screen" class="calcu-screen">
+			<div class="screen numScreenSave"></div><input type="text" readonly="readonly" class="screen numScreen" value="0" maxlength="12" /></div><div id="calcu-btn" class="calcu-btn"><input type="button" class="number-btn" value="7" /><input type="button" class="number-btn" value="8"><input type="button" class="number-btn" value="9"><input type="button" class="tool" data-excute="delAll" value="CE"><input type="button" class="tool" data-excute="clearscreen" value="AC"><input type="button" class="number-btn" value="4"><input type="button" class="number-btn" value="5"><input type="button" class="number-btn" value="6"><input type="button" class="tool" data-excute="times" value="×"><input type="button" class="tool" data-excute="del" value="←"><input type="button" class="number-btn" value="1"><input type="button" class="number-btn" value="2"><input type="button" class="number-btn" value="3"><input type="button" class="tool" data-excute="divide" value="÷"><input type="button" class="tool" data-excute="plus" value="+"><input type="button" class="number-btn" value="0"><input type="button" class="tool number-btn" data-excute="dzero" value="00"><input type="button" class="tool" data-excute="dot" value="."><input type="button" class="tool" data-excute="minus" value="-"><input type="button" class="tool" data-excute="equal" value="=">
+			</div>
+		</div>
+	</div>
+</div>
+<script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="calculator.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//记录计算器原始状态
+        calculator.index = 0;
+        //初始化计算器
+		calculator.init();
+	})
+</script>
+</body>
+</html>
