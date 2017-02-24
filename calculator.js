@@ -371,47 +371,25 @@ var calculator = (function(){
         if(num !== 0){
             switch (calcul) { //判断要输入状态
                 case 1:
-                    result = parseFloat(num) + numshow;
-
-                    //处理精度问题
-                    if(String(result).indexOf(".") !== -1){
-
-                        result = parseFloat(result.toFixed(9));
-                    }
-
+                    var a = new BigDecimal(String(num));
+                    var b = new BigDecimal(String(numshow));
+                    result = a.add(b) + "";
                     break; //计算"+"
                 case 2:
-                    result = num - numshow;
-
-                    //处理精度问题
-                    if(String(result).indexOf(".") !== -1){
-
-                        result = parseFloat(result.toFixed(9));
-                    }
+                    var a = new BigDecimal(String(num));
+                    var b = new BigDecimal(String(numshow));
+                    result = a.subtract(b) + "";
                     break; //计算"-"
                 case 3:
-                    result = num * numshow;
-
-                    //处理精度问题
-                    if(String(result).indexOf(".") !== -1){
-
-                        result = result.toFixed(13);
-                        if(String(parseFloat(result)).indexOf("e") === -1){
-
-                            result = parseFloat(result);
-                        }
-                        result = removeZeroForCal(String(result));
-                    }
+                    var a = new BigDecimal(String(num));
+                    var b = new BigDecimal(String(numshow));
+                    result = a.multiply(b) + "";
                     break; //计算"*"
                 case 4:
                     if (numshow != 0 && !isNaN(numshow)) {
-                        result = num / numshow;
-
-                        //处理精度问题
-                        if(String(result).indexOf(".") !== -1){
-
-                            result = parseFloat(result.toFixed(9));
-                        }
+                        var a = new BigDecimal(String(num));
+                        var b = new BigDecimal(String(numshow));
+                        result = parseFloat(a.divide(b,12,BigDecimal.ROUND_HALF_EVEN) + "");
                     } else {
                         result = "除数不能为零";
                     }
@@ -420,30 +398,20 @@ var calculator = (function(){
             }
 
         }else{
-
             if(calcul == 2){
-                result = num - numshow;
-                if(String(result).indexOf(".") !== -1){
-                    //处理精度问题
-                    result = parseFloat(result.toFixed(9));
-                }
+                var a = new BigDecimal(String(num));
+                var b = new BigDecimal(String(numshow));
+                result = a.subtract(b) + "";
             }else if(calcul == 3){
-                result = num * numshow;
-                if(String(result).indexOf(".") !== -1){
-                    //处理精度问题
-                    result = result.toFixed(13);
-                    if(String(parseFloat(result)).indexOf("e") === -1){
-                        result = parseFloat(result);
-                    }
-                    result = removeZeroForCal(String(result));
-                }
+                var a = new BigDecimal(String(num));
+                var b = new BigDecimal(String(numshow));
+                result = a.multiply(b) + "";
+
             }else if(calcul == 4){
                 if (numshow != 0 && !isNaN(numshow)) {
-                    result = num / numshow
-                    if(String(result).indexOf(".") !== -1){
-                        //处理精度问题
-                        result = parseFloat(result.toFixed(9));
-                    }
+                    var a = new BigDecimal(String(num));
+                    var b = new BigDecimal(String(numshow));
+                    result = parseFloat(a.divide(b,12,BigDecimal.ROUND_HALF_EVEN) + "");
                 } else {
                     result = "除数不能为零";
                 }
