@@ -71,11 +71,6 @@ var calculator = (function(){
 
                     //执行运算符输入
                     else if(e.which in excuteCode){
-
-                        //阻止微端回退页面
-                        if(e.which == 8){
-                            e.preventDefault();
-                        }
                         excuteCalcu[excuteCode[e.which]]();
                     }
                 }
