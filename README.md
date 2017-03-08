@@ -1,7 +1,7 @@
 # calculator
 一个基于web的通用计算器程序
 
-[点击预览](http://suyunsoft.com/calculator/calcuator.html){:target="_blank"}
+[点击预览](http://suyunsoft.com/calculator/calcuator.html)
 
 计算器快捷键如下：
 
